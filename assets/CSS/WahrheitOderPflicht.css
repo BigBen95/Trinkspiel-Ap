@@ -1,0 +1,58 @@
+.headline h1{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    word-spacing: 5px;
+}
+#wahrheit-pflicht-game{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+#wahrheit-btn{
+    background-color: #545C8F;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 40px 100px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#pflicht-btn{
+    background-color: #FFA301;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 40px 100px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#wahrheit-pflicht-game p{
+    color: white;
+    font-size: 20px;
+    font-weight: lighter;
+}
+#zufall-btn{
+    background: linear-gradient(90deg, rgba(84,92,143,1) 0%, rgba(84,92,143,1) 50%, rgba(255,163,1,1) 50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 12px 50px;
+    border-radius: 8px;
+    cursor: pointer;
+}

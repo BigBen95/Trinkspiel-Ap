@@ -1,0 +1,61 @@
+#KingsCupGame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#KingsCupGame h2 {
+    font-size: 28px;
+    color: white;
+    margin-top: 20px;
+}
+#cardArea{
+    
+    min-height: 70vh;
+    min-width: 90%;
+    margin: 20px;
+    background-color: #545C8F;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+#cardArea h3{
+    color: white;
+}
+#CardName {
+    font-size: 28px;
+    font-weight: bolder;
+}
+#toDo {
+    font-size: 24px;
+    font-family: sans-serif;
+    margin: 10px;
+    text-align: center;
+}
+#newCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 20px;
+    background-color: #545C8F;
+    height: 4rem;
+    width: 16rem;
+}
+#CardPicture , #newCardPicture {
+    height: 450px;
+    width: 300px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+}
+#CardPicture {
+    z-index: 2;
+}

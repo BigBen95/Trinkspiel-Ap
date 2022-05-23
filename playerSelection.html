@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <script src="./assets/JS/playerSelection.js" defer></script>
+    <title>Drink! or lose</title>
+</head>
+<body>
+    <header>
+        <div id="settings">
+            <div id="language-settings">
+                <img src="/assets/Icons/back.svg" alt="" class="back-arrow">
+            </div>
+        </div>
+        <div class="logo" id="bannerlogo">
+            <img src="./assets/Icons/logo+schrift-07.svg" alt="">
+        </div>
+    </header>
+    <main>
+        <section id="fast-start">
+            <!-- Hier unten vorlage fürs Template -->
+            <div class="game">
+                <img src="./assets/Pictures/party-pic.jpg" alt="" class="gameImg">
+                <div>
+                <p>Caption</p>
+                <h3>Spielname</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="player-selection">
+        <div class="player">
+        <div class="edit-player" onclick="avatarSelectionMenu()"><img src="./assets/Icons/pen.svg" alt="" class="pen-icon"></div>
+        <input type="text" placeholder="Spieler 1" class="player-name">
+        </div>
+
+        <div class="player">
+            <div class="edit-player"  onclick="avatarSelectionMenu()"><img src="./assets/Icons/pen.svg" alt="" class="pen-icon"></div>
+            <input type="text" placeholder="Spieler 2" class="player-name">
+        </div>
+
+        <div class="player">
+            <div class="edit-player"  onclick="avatarSelectionMenu()"><img src="./assets/Icons/pen.svg" alt="" class="pen-icon"></div>
+            <input type="text" placeholder="Spieler 3" class="player-name">
+        </div>
+
+        <div class="player">
+            <div class="add-player"  onclick="avatarSelectionMenu()"><img src="./assets/Icons/+.svg" alt="" class="add-player-icon"></div>
+            <p class="add-player-text">Spieler hinzufügen</p>
+        </div>
+        </section>
+
+        <section id="startGame">
+            <button id="startGame-button">Spiel starten</button>
+        </section>
+    </main>
+
+    <footer>
+    <div>
+        <img src="./assets/Icons/star.svg" alt="" class="icon">
+        <img src="./assets/Icons/letter.svg" alt="" class="icon">
+        <img src="./assets/Icons/thumbs_up.svg" alt="" class="icon">
+        <img src="./assets/Icons/share.svg" alt="" class="icon">
+    </div>
+    <div class="footer-text">
+    <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+    <p>© 2022 20North Germany UG</p>
+    </div>
+    </footer>
+
+    <!-- Avatarauswahl -->
+    <div id="avatarSelection" class="MenuBg">
+        <div id="avatarSelectionMenu">
+           <div class="backArrow">
+                <img src="/assets/Icons/back.svg" alt="" class="back-arrow" onclick="avatarSelectionMenu()">
+           </div>
+            <div class="selection">
+                <p>Wähle deinen</p>
+                <h1>Charakter</h1>
+                <!-- Hier wird dann der ausgewählte Avatar eingefügt -->
+                <div class="main-avatar">
+                </div>
+                <div class="available-avatars">
+                    <div class="avatars"></div>
+                    <div class="avatars"></div>
+                    <div class="avatars"></div>
+                    <div class="avatars"></div>
+                    <div class="avatars"></div>
+                    <div class="avatars"></div>
+                    <div class="avatars"></div>
+                    <div class="avatars"></div>
+                </div>
+            </div>
+            <div class="continue-button">
+                <button id="continue">Weiter</button>   
+            </div>         
+        </div>
+        </div>
+    </div>  
+</body>
+</html>
