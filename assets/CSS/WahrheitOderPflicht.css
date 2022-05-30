@@ -1,9 +1,18 @@
+.headline{
+    overflow: hidden;
+    position: relative;
+    height: 30px;
+    width: 390px;
+}
 .headline h1{
     color: white;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
     word-spacing: 5px;
+    position: absolute;
+    height: 30px;
+    white-space: nowrap;
 }
 #wahrheit-pflicht-game{
     display: flex;
@@ -55,4 +64,11 @@
     padding: 12px 50px;
     border-radius: 8px;
     cursor: pointer;
+}
+#WoPtoDo {
+    color: white;
+    margin: 0px 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
 }

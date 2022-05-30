@@ -15,17 +15,36 @@
         <div id="cardArea">
             <div id="CardPicture">
                 <!-- Hier werden die Karten eingeblendet -->
-                <h3 id="CardName"></h3>
-                <img src="" alt="">
+                <h3 class="CardName MiddleCardName"></h3>
+                <h3 class="CardName LeftCardName"></h3>
+                <h3 class="CardName RightCardName"></h3>
+                <img class="middleSymbol" src="" alt="">
+                <img class="leftSymbol" src="" alt="">
+                <img class="rightSymbol" src="" alt="">
             </div>
             <div id="newCardPicture">
-                <h3 id="newCardName"></h3>
-                <img src="" alt="">
+                <h3 class="newCardName newMiddleCardName"></h3>
+                <h3 class="newCardName newLeftCardName"></h3>
+                <h3 class="newCardName newRightCardName"></h3>
+                <img class="middleSymbol" src="" alt="">
+                <img class="leftSymbol" src="" alt="">
+                <img class="rightSymbol" src="" alt="">
             </div>
             <h3 id="toDo"></h3>
             <div id="kingCount"></div>
         </div>
         <button id="newCard"> Neue Karte</button>
+        <script>
+            const newCardBtn = document.querySelector("#newCard");
+            const oldCard = document.querySelector("#CardPicture");
+            newCardBtn.addEventListener("click", ()=>{
+                const cardChange = new gsap.timeline()
+                cardChange.to(oldCard, 1, {x: 500, rotate: 45})
+                    	    .to(oldCard, 0 ,{x:0, rotate: 0})
+
+            })
+            
+        </script>
     </section>
 
 </body>

@@ -1,12 +1,16 @@
 
 const CardButton = document.querySelector("#newCard")
 const CardChallenge = document.querySelector("#toDo")
-const CardName = document.querySelector("#CardName")
+const CardName = document.querySelectorAll(".CardName")
+const newCardName = document.querySelectorAll(".newCardName")
+const CardImgSymbol = document.querySelectorAll("#CardPicture img")
+const newCardImgSymbol = document.querySelectorAll("#newCardPicture img")
 
-let Cards = ["Kreuz 2", "Kreuz 3" ,"Kreuz 4", "Kreuz 5" , "Kreuz 6", "Kreuz 7" , "Kreuz 8" , "Kreuz 9" ,"Kreuz 10" ,"Kreuz Bube" , "Kreuz Dame" , "Kreuz König" , "Kreuz Ass",
-             "Herz 2", "Herz 3" ,"Herz 4", "Herz 5" , "Herz 6", "Herz 7" , "Herz 8" , "Herz 9" ,"Herz 10" ,"Herz Bube" , "Herz Dame" , "Herz König" , "Herz Ass",
-            "Pik 2", "Pik 3" ,"Pik 4", "Pik 5" , "Pik 6", "Pik 7" , "Pik 8" , "Pik 9" ,"Pik 10" ,"Pik Bube" , "Pik Dame" , "Pik König" , "Pik Ass",
-            "Karo 2", "Karo 3" ,"Karo 4", "Karo 5" , "Karo 6", "Karo 7" , "Karo 8" , "Karo 9" ,"Karo 10" ,"Karo Bube" , "Karo Dame" , "Karo König" , "Karo Ass"]
+
+let Cards = ["Kreuz 2", "Kreuz 3" ,"Kreuz 4", "Kreuz 5" , "Kreuz 6", "Kreuz 7" , "Kreuz 8" , "Kreuz 9" ,"Kreuz 10" ,"Kreuz B" , "Kreuz D" , "Kreuz K" , "Kreuz A",
+             "Herz 2", "Herz 3" ,"Herz 4", "Herz 5" , "Herz 6", "Herz 7" , "Herz 8" , "Herz 9" ,"Herz 10" ,"Herz B" , "Herz D" , "Herz K" , "Herz A",
+            "Pik 2", "Pik 3" ,"Pik 4", "Pik 5" , "Pik 6", "Pik 7" , "Pik 8" , "Pik 9" ,"Pik 10" ,"Pik B" , "Pik D" , "Pik K" , "Pik A",
+            "Karo 2", "Karo 3" ,"Karo 4", "Karo 5" , "Karo 6", "Karo 7" , "Karo 8" , "Karo 9" ,"Karo 10" ,"Karo B" , "Karo D" , "Karo K" , "Karo A"]
 
 
 CardButton.addEventListener("click" , ()=> {
@@ -25,8 +29,11 @@ function getRandomCard (){
         CardButton.addEventListener("click" , ()=>{window.location.reload()})
     }
     else {
-        CardName.innerHTML = UsedCard;
+        newCardName.forEach((child)=>{child.innerHTML = UsedCard[0].split(' ')[1];})
+        setTimeout(()=>{CardName.forEach((child)=>{child.innerHTML = UsedCard[0].split(' ')[1];})}, 990)
         const CardValue = UsedCard[0].split(' ')[1]
+        const CardSymbol = UsedCard[0].split(' ')[0]
+
         switch (CardValue){
             case "2":
                 CardChallenge.innerHTML = "Verteile 2 Schlücke";
@@ -55,18 +62,46 @@ function getRandomCard (){
             case "10":
                 CardChallenge.innerHTML = "Alle Trinken";
                 break;
-            case "Bube":
+            case "B":
                 CardChallenge.innerHTML = "Kategorie";
                 break;
-            case "Dame":
+            case "D":
                 CardChallenge.innerHTML = "Du bist Fragenmeister";
                 break;
-            case "König":
+            case "K":
                 CardChallenge.innerHTML = "Ein König wurde gezogen";
                 break;
-            case "Ass":
+            case "A":
                 CardChallenge.innerHTML = "Du darfst dir eine Regel aussuchen";
                 break;
+        }
+        switch (CardSymbol){
+            case "Herz":
+                newCardName.forEach((child)=>{child.style.color = "#a31919"})
+                setTimeout(()=>{CardName.forEach((child)=>{child.style.color = "#a31919"})}, 990)
+                newCardImgSymbol.forEach((child)=>{child.setAttribute("src", "./assets/icons/KartenSymbole/Herz.svg")})
+                setTimeout(()=>{CardImgSymbol.forEach((child)=>{child.setAttribute("src", "./assets/icons/KartenSymbole/Herz.svg")})}, 990)
+                break;
+            case "Karo":
+                newCardName.forEach((child)=>{child.style.color = "#a31919"})
+                setTimeout(()=>{CardName.forEach((child)=>{child.style.color = "#a31919"})}, 990)
+                newCardImgSymbol.forEach((child)=>{child.setAttribute("src", "./assets/icons/KartenSymbole/Karo.svg")})
+                setTimeout(()=>{CardImgSymbol.forEach((child)=>{child.setAttribute("src", "./assets/icons/KartenSymbole/Karo.svg")})}, 990)
+                break;
+            case "Kreuz":
+                newCardName.forEach((child)=>{child.style.color = "#000000"})
+                setTimeout(()=>{CardName.forEach((child)=>{child.style.color = "#000000"})}, 990)
+                newCardImgSymbol.forEach((child)=>{child.setAttribute("src", "./assets/icons/KartenSymbole/Kreuz.svg")})
+                setTimeout(()=>{CardImgSymbol.forEach((child)=>{child.setAttribute("src", "./assets/icons/KartenSymbole/Kreuz.svg")})}, 990)
+                break;
+            case "Pik":
+                newCardName.forEach((child)=>{child.style.color = "#000000"})
+                setTimeout(()=>{CardName.forEach((child)=>{child.style.color = "#000000"})}, 990)
+                newCardImgSymbol.forEach((child)=>{child.setAttribute("src", "./assets/icons/KartenSymbole/Pik.svg")})
+                setTimeout(()=>{CardImgSymbol.forEach((child)=>{child.setAttribute("src", "./assets/icons/KartenSymbole/Pik.svg")})}, 990)
+                break;
+
+                
         }
     }
     
